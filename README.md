@@ -179,7 +179,10 @@ ORDER BY TotalCustomers DESC
   </details>
 
 ```SQL
-
+SELECT c.city City, COUNT(o.order_id) OrderCount
+FROM customers c LEFT JOIN orders o
+ON c.customer_id = o.customer_id
+GROUP BY c.city
 ```
 
 ## Data Normalization
