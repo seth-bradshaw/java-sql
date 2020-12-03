@@ -150,7 +150,10 @@ WHERE customer_id = 'SHIRE'
   </details>
 
 ```SQL
-
+SELECT COUNT(c.customer_id) TotalCustomers, c.company_name Store
+FROM customers c LEFT JOIN orders o
+ON c.customer_id = o.customer_id
+GROUP BY c.company_name
 ```
 
 * [ ] ***list customers by contact name and the number of orders per contact name. Sort the list by the number of orders in descending order. _Jose Pavarotti_ should be at the top with 31 orders followed by _Roland Mendal_ with 30 orders. Last should be _Francisco Chang_ with 1 order***
@@ -161,10 +164,11 @@ WHERE customer_id = 'SHIRE'
   </details>
 
 ```SQL
-SELECT COUNT(c.customer_id) TotalCustomers, c.company_name Store
+SELECT COUNT(o.order_id) TotalCustomers, c.contact_name CustName
 FROM customers c LEFT JOIN orders o
 ON c.customer_id = o.customer_id
-GROUP BY c.company_name
+GROUP BY c.contact_name
+ORDER BY TotalCustomers DESC
 ```
 
 * [ ] ***list orders grouped by customer's city showing the number of orders per city. Returns 69 Records with _Aachen_ showing 6 orders and _Albuquerque_ showing 18 orders***
@@ -195,49 +199,49 @@ Below are some empty tables to be used to normalize the database
 * Not all of the cells will contain data in the final solution
 * Feel free to edit these tables as necessary
 
-Table Name:
+Table Name: Person Table
 
-|            |            |            |            |            |            |            |            |            |
+| Person Id  |Person Name |            |            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
+|     1      | Jane       |            |            |            |            |            |            |            |
+|     2      | Bob        |            |            |            |            |            |            |            |
+|     3      | Sam        |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 
-Table Name:
-
-|            |            |            |            |            |            |            |            |            |
+Table Name: Pet Table
+PERSON ID AND PET ID NEED TO BE SWITCHED
+| Person Id  |   Pet Id   |  Pet Name  |  Pet Type  |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
+|     1      |      1     | Ellie      | Dog        |            |            |            |            |            |
+|     1      |      2     | Tiger      | Cat        |            |            |            |            |            |
+|     1      |      3     | Toby       | Turtle     |            |            |            |            |            |
+|     2      |      4     | Joe        | Horse      |            |            |            |            |            |
+|     3      |      5     | Ginger     | Dog        |            |            |            |            |            |
+|     3      |      6     | Miss Kitty | Cat        |            |            |            |            |            |
+|     3      |      7     | Bubble     | Fish       |            |            |            |            |            |
 
-Table Name:
+Table Name: Yard Table
 
-|            |            |            |            |            |            |            |            |            |
+| Person Id  | Fenced Yard|            |            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
+|     1      | No         |            |            |            |            |            |            |            |
+|     2      | No         |            |            |            |            |            |            |            |
+|     3      | Yes        |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 
-Table Name:
+Table Name: Location_Type Table
 
-|            |            |            |            |            |            |            |            |            |
+| Person Id  |City Dweller|            |            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
+|     1      | Yes        |            |            |            |            |            |            |            |
+|     2      | No         |            |            |            |            |            |            |            |
+|     3      | No         |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
