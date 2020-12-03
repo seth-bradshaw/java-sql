@@ -228,11 +228,11 @@ PERSON ID AND PET ID NEED TO BE SWITCHED
 
 Table Name: Habitat Table
 
-| Person Id  | Fenced Yard|            |            |            |            |            |            |            |
+| Person Id  | Fenced Yard|City Dweller|            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|     1      | No         |            |            |            |            |            |            |            |
-|     2      | No         |            |            |            |            |            |            |            |
-|     3      | Yes        |            |            |            |            |            |            |            |
+|     1      | No         |   Yes      |            |            |            |            |            |            |
+|     2      | No         |     No     |            |            |            |            |            |            |
+|     3      | Yes        |     No     |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
