@@ -216,17 +216,17 @@ Table Name: Person Table
 
 Table Name: Pet Table
 PERSON ID AND PET ID NEED TO BE SWITCHED
-| Person Id  |   Pet Id   |  Pet Name  |  Pet Type  |            |            |            |            |            |
+| Person Id  |   Pet Id   |  Pet Name  | Pet Type Id|            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|     1      |      1     | Ellie      | Dog        |            |            |            |            |            |
-|     1      |      2     | Tiger      | Cat        |            |            |            |            |            |
-|     1      |      3     | Toby       | Turtle     |            |            |            |            |            |
-|     2      |      4     | Joe        | Horse      |            |            |            |            |            |
-|     3      |      5     | Ginger     | Dog        |            |            |            |            |            |
-|     3      |      6     | Miss Kitty | Cat        |            |            |            |            |            |
-|     3      |      7     | Bubble     | Fish       |            |            |            |            |            |
+|     1      |      1     | Ellie      | 1          |            |            |            |            |            |
+|     1      |      2     | Tiger      | 2          |            |            |            |            |            |
+|     1      |      3     | Toby       | 3          |            |            |            |            |            |
+|     2      |      4     | Joe        | 4          |            |            |            |            |            |
+|     3      |      5     | Ginger     | 1          |            |            |            |            |            |
+|     3      |      6     | Miss Kitty | 2          |            |            |            |            |            |
+|     3      |      7     | Bubble     | 5          |            |            |            |            |            |
 
-Table Name: Yard Table
+Table Name: Habitat Table
 
 | Person Id  | Fenced Yard|            |            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
@@ -238,15 +238,15 @@ Table Name: Yard Table
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 
-Table Name: Location_Type Table
+Table Name:  Pet Type Table
 
-| Person Id  |City Dweller|            |            |            |            |            |            |            |
+| Pet Type Id|Pet Type Str|            |            |            |            |            |            |            |
 |------------|------------|------------|------------|------------|------------|------------|------------|------------|
-|     1      | Yes        |            |            |            |            |            |            |            |
-|     2      | No         |            |            |            |            |            |            |            |
-|     3      | No         |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
-|            |            |            |            |            |            |            |            |            |
+|     1      | Dog        |            |            |            |            |            |            |            |
+|     2      | Cat        |            |            |            |            |            |            |            |
+|     3      | Turtle     |            |            |            |            |            |            |            |
+|     4      | Horse      |            |            |            |            |            |            |            |
+|     5      |  Fish      |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 |            |            |            |            |            |            |            |            |            |
 
